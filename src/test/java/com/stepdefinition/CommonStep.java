@@ -19,5 +19,16 @@ public class CommonStep extends BaseClass {
 		Assert.assertEquals("Verify after login success message", expLoginSuccessMsg, actLoginSuccessMsg);
 
 	}
+	
+	@Then("User should verify after search hotel success message {string}")
+	public void user_should_verify_after_search_hotel_success_message(String exSerchHolelSuccessMsg) {
+		WebElement element = pom.getSelecthotelpage().getTxtSerchHotelSuccessMsg();
+		String actSearchHotelSuccessMsg = elementGetText(element);
+		Assert.assertEquals("Verify after search hotel success message",exSerchHolelSuccessMsg, actSearchHotelSuccessMsg);
+		
+		
 
+	 
+
+}
 }
